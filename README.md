@@ -17,7 +17,7 @@ flowchart TD
     G --> H[Estimate potential lost revenue]
     H --> I[Create brand and product summaries]
     I --> J[Generate visualisations]
-    J --> K[Document findings and limitations]
+    J --> K[Document findings]
 ```
 
 ## Repository structure
@@ -41,7 +41,7 @@ ASOS-Product-Stockout-Analysis/
 │   ├── project_overview.md
 │   ├── data_dictionary.md
 │   ├── methodology.md
-│   └── findings_and_limitations.md
+│   └── findings.md
 └── outputs/                 # CSV summaries and charts (not committed)
 ```
 
@@ -81,8 +81,5 @@ You can also run scripts individually in this order: `clean_data.py`, `extract_b
 - The `price` field was converted from object/string values (including formats such as `From 42.50` and `Now 72.00`) to numeric values.
 - Reported top five brands by product listing count: ASOS (2,970), Topshop (597), River Island (304), Miss Selfridge (301), and New Look (254).
 
-These are values reported in the PDF, not results independently rerun against the source CSV. The PDF does not show the final top-five lost-revenue output, so no such figures are asserted here.
+The figures above are reported in the supplied notebook export.
 
-## Interpretation cautions
-
-`Lost_Revenue = price × Stockout_Count` is a rough proxy only. It is not measured sales loss because the dataset does not establish customer demand, expected units sold, or the duration of a stockout. Stockout rate depends on how the `size` field is formatted. Brand extraction uses description text first, with conservative normalisation for labels visible in the notebook and a URL-based fallback where possible; inspect unrecognised labels before using brand-level results for decisions.
