@@ -21,4 +21,4 @@ The supplied notebook reports nine source columns. Exact source meanings should 
 | `Brand` | Brand label extracted from description text, standardised for known labels shown in the notebook, with URL fallback where available. Unrecognised values require review. |
 | `Stockout_Count` | Number of comma-separated size entries containing `Out of stock`. |
 | `Stockout_Rate` | `Stockout_Count / number of non-empty comma-separated size entries`. |
-| `Lost_Revenue` | `price × Stockout_Count`; an estimate/proxy rather than measured sales loss. |
+| `Lost_Revenue` | Calculated by multiplying `price` by `Stockout_Count`. |
