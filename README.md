@@ -4,8 +4,7 @@ A Python data analytics project based on the ASOS product-listing notebook. The 
 
 > **Data note:** The source CSV (`products_asos.csv`) was not included in the supplied PDF. Add an authorised copy locally to `data/raw/products_asos.csv` before running the pipeline. Generated data and outputs are excluded from version control.
 
-## High-level architecture
-
+## Architecture Overview
 ```mermaid
 flowchart TD
     A[ASOS product CSV] --> B[Load and profile with Pandas]
@@ -71,7 +70,7 @@ Python, Pandas, Matplotlib, and Seaborn.
    python src/run_pipeline.py
    ```
 
-You can also run scripts individually in this order: `clean_data.py`, `extract_brands.py`, `analyze_stockouts.py`, then `create_visualizations.py`.
+A product-listing analytics project using ASOS catalogue data to clean product records and prices, extract brand names from descriptions, measure out-of-stock sizes and estimate potential missed sales using product prices and stockout counts. Summary tables and charts help examine brand mix, product availability and stockout patterns.
 
 ## Findings reported in the supplied notebook PDF
 
