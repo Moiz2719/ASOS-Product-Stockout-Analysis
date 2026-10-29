@@ -1,10 +1,11 @@
 # ASOS Product Stockout & Lost Revenue Analysis
 
-A Python data analytics project based on the ASOS product-listing notebook. The workflow profiles and cleans product data, converts prices to numeric values, extracts brand labels, measures out-of-stock sizes, estimates potential lost revenue, and creates summary tables and charts.
+A product-listing analytics project using ASOS catalogue data to clean product records and prices, extract brand names from descriptions, measure out-of-stock sizes and estimate potential missed sales using product prices and stockout counts. Summary tables and charts help examine brand mix, product availability and stockout patterns.
 
 > **Data note:** The source CSV (`products_asos.csv`) was not included in the supplied PDF. Add an authorised copy locally to `data/raw/products_asos.csv` before running the pipeline. Generated data and outputs are excluded from version control.
 
 ## Architecture Overview
+
 ```mermaid
 flowchart TD
     A[ASOS product CSV] --> B[Load and profile with Pandas]
