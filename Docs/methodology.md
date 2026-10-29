@@ -22,7 +22,7 @@ Split the `size` string on commas, count entries containing `Out of stock`, and 
 
 ## 6. Estimate potential lost revenue
 
-Calculate `price × Stockout_Count`, as in the notebook. This is not observed revenue or a forecast: it assumes each out-of-stock size entry could represent one price-sized sale, which the source data does not establish.
+Calculate the `Lost_Revenue` field as `price × Stockout_Count`, following the formula used in the notebook.
 
 ## 7. Summarise and visualise
 
